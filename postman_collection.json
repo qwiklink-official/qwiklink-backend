@@ -1,0 +1,405 @@
+{
+    "item": [
+        {
+            "id": "2ba2c80e-ff8d-4549-8251-db0ac3525b32",
+            "name": "Health check",
+            "request": {
+                "name": "Health check",
+                "description": {},
+                "url": {
+                    "path": [
+                        "health"
+                    ],
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "query": [],
+                    "variable": []
+                },
+                "method": "GET",
+                "auth": null
+            },
+            "response": [
+                {
+                    "id": "65109ac3-4e76-49cc-bd9d-42a5b83734e1",
+                    "name": "OK",
+                    "originalRequest": {
+                        "url": {
+                            "path": [
+                                "health"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        },
+                        "method": "GET",
+                        "body": {}
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "body": "{\n \"ok\": false\n}",
+                    "cookie": [],
+                    "_postman_previewlanguage": "json"
+                }
+            ],
+            "event": []
+        },
+        {
+            "id": "31f7584d-94ef-4257-8a4b-c5543cefb692",
+            "name": "api",
+            "item": [
+                {
+                    "id": "afadc4be-38cf-4f50-b2c2-2d904fb6f343",
+                    "name": "auth",
+                    "item": [
+                        {
+                            "id": "3ec795d7-8e04-4d04-9ce5-d1abba96275d",
+                            "name": "Register a new user",
+                            "request": {
+                                "name": "Register a new user",
+                                "description": {},
+                                "url": {
+                                    "path": [
+                                        "api",
+                                        "auth",
+                                        "register"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "method": "POST",
+                                "auth": null,
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"email\": \"<email>\",\n    \"password\": \"<string>\",\n    \"firstName\": \"<string>\",\n    \"lastName\": \"<string>\",\n    \"phoneNumber\": \"<string>\",\n    \"role\": \"<string>\"\n}"
+                                }
+                            },
+                            "response": [
+                                {
+                                    "id": "87abbe27-bd97-4a19-aec3-d7a78eb96010",
+                                    "name": "Created",
+                                    "originalRequest": {
+                                        "url": {
+                                            "path": [
+                                                "api",
+                                                "auth",
+                                                "register"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [],
+                                            "variable": []
+                                        },
+                                        "method": "POST",
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\n    \"email\": \"<email>\",\n    \"password\": \"<string>\",\n    \"firstName\": \"<string>\",\n    \"lastName\": \"<string>\",\n    \"phoneNumber\": \"<string>\",\n    \"role\": \"<string>\"\n}"
+                                        }
+                                    },
+                                    "status": "Created",
+                                    "code": 201,
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "body": "{\n \"userId\": \"07eea668-accd-9207-71af-97e19b80452d\",\n \"token\": \"cillum qui consectetur\"\n}",
+                                    "cookie": [],
+                                    "_postman_previewlanguage": "json"
+                                },
+                                {
+                                    "id": "52abfbf0-bac6-4a41-9ee9-a69a0d34f18e",
+                                    "name": "Bad Request",
+                                    "originalRequest": {
+                                        "url": {
+                                            "path": [
+                                                "api",
+                                                "auth",
+                                                "register"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [],
+                                            "variable": []
+                                        },
+                                        "method": "POST",
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\n    \"email\": \"<email>\",\n    \"password\": \"<string>\",\n    \"firstName\": \"<string>\",\n    \"lastName\": \"<string>\",\n    \"phoneNumber\": \"<string>\",\n    \"role\": \"<string>\"\n}"
+                                        }
+                                    },
+                                    "status": "Bad Request",
+                                    "code": 400,
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "text/plain"
+                                        }
+                                    ],
+                                    "body": "",
+                                    "cookie": [],
+                                    "_postman_previewlanguage": "text"
+                                }
+                            ],
+                            "event": []
+                        },
+                        {
+                            "id": "ebb1c59c-6c68-48aa-b9fc-9887a1bd18f0",
+                            "name": "Login",
+                            "request": {
+                                "name": "Login",
+                                "description": {},
+                                "url": {
+                                    "path": [
+                                        "api",
+                                        "auth",
+                                        "login"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "method": "POST",
+                                "auth": null,
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"email\": \"<email>\",\n    \"password\": \"<string>\"\n}"
+                                }
+                            },
+                            "response": [
+                                {
+                                    "id": "e357acd1-3740-4d3a-9c2b-213d05c2a77c",
+                                    "name": "Authenticated",
+                                    "originalRequest": {
+                                        "url": {
+                                            "path": [
+                                                "api",
+                                                "auth",
+                                                "login"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [],
+                                            "variable": []
+                                        },
+                                        "method": "POST",
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\n    \"email\": \"<email>\",\n    \"password\": \"<string>\"\n}"
+                                        }
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "body": "{\n \"userId\": \"07eea668-accd-9207-71af-97e19b80452d\",\n \"token\": \"cillum qui consectetur\"\n}",
+                                    "cookie": [],
+                                    "_postman_previewlanguage": "json"
+                                },
+                                {
+                                    "id": "d5a22799-3305-4f07-b8f9-39f4af24bb5e",
+                                    "name": "Unauthorized",
+                                    "originalRequest": {
+                                        "url": {
+                                            "path": [
+                                                "api",
+                                                "auth",
+                                                "login"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [],
+                                            "variable": []
+                                        },
+                                        "method": "POST",
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\n    \"email\": \"<email>\",\n    \"password\": \"<string>\"\n}"
+                                        }
+                                    },
+                                    "status": "Unauthorized",
+                                    "code": 401,
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "text/plain"
+                                        }
+                                    ],
+                                    "body": "",
+                                    "cookie": [],
+                                    "_postman_previewlanguage": "text"
+                                }
+                            ],
+                            "event": []
+                        }
+                    ],
+                    "event": []
+                },
+                {
+                    "id": "bbb0c78b-f1a0-4e96-b888-44101023b25d",
+                    "name": "JWT-protected test endpoint",
+                    "request": {
+                        "name": "JWT-protected test endpoint",
+                        "description": {},
+                        "url": {
+                            "path": [
+                                "api",
+                                "protected"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        },
+                        "method": "GET",
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "<Bearer Token>"
+                                }
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "id": "c5731817-0a73-40fa-9f52-4e27d807a72a",
+                            "name": "OK",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "api",
+                                        "protected"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "header": [
+                                    {
+                                        "description": {
+                                            "content": "Added as a part of security scheme: bearer",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "Authorization",
+                                        "value": "Bearer <token>"
+                                    }
+                                ],
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "body": "{\n \"ok\": true,\n \"user\": {\n  \"userId\": \"sit sunt in do\",\n  \"role\": \"dolor volu\"\n }\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "197efd37-d45d-4759-b88a-f22675a63aaf",
+                            "name": "Unauthorized",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "api",
+                                        "protected"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                },
+                                "header": [
+                                    {
+                                        "description": {
+                                            "content": "Added as a part of security scheme: bearer",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "Authorization",
+                                        "value": "Bearer <token>"
+                                    }
+                                ],
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Unauthorized",
+                            "code": 401,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "text/plain"
+                                }
+                            ],
+                            "body": "",
+                            "cookie": [],
+                            "_postman_previewlanguage": "text"
+                        }
+                    ],
+                    "event": []
+                }
+            ],
+            "event": []
+        }
+    ],
+    "event": [],
+    "variable": [
+        {
+            "id": "baseUrl",
+            "type": "string",
+            "value": "http://localhost:5000"
+        }
+    ],
+    "info": {
+        "_postman_id": "edee6755-9e51-4a81-934a-49163efd385d",
+        "name": "Qwiklink Backend API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": {
+            "content": "Minimal OpenAPI specification for the Qwiklink backend used in local development\nand CI smoke-tests. This file documents the health endpoint, auth (register/login),\nand a JWT-protected test route used by the smoke-test.\n",
+            "type": "text/plain"
+        }
+    }
+}
