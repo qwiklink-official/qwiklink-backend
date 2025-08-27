@@ -1,7 +1,7 @@
 {
     "item": [
         {
-            "id": "2ba2c80e-ff8d-4549-8251-db0ac3525b32",
+            "id": "7b9e2404-8ab4-49c3-bbfe-3932043710aa",
             "name": "Health check",
             "request": {
                 "name": "Health check",
@@ -21,7 +21,7 @@
             },
             "response": [
                 {
-                    "id": "65109ac3-4e76-49cc-bd9d-42a5b83734e1",
+                    "id": "678397b1-6a26-4772-b214-e76bffdecfbe",
                     "name": "OK",
                     "originalRequest": {
                         "url": {
@@ -45,7 +45,7 @@
                             "value": "application/json"
                         }
                     ],
-                    "body": "{\n \"ok\": false\n}",
+                    "body": "{\n \"ok\": true\n}",
                     "cookie": [],
                     "_postman_previewlanguage": "json"
                 }
@@ -53,15 +53,15 @@
             "event": []
         },
         {
-            "id": "31f7584d-94ef-4257-8a4b-c5543cefb692",
+            "id": "d762f476-8a8d-4e4b-8d7a-04dbeee4a9ed",
             "name": "api",
             "item": [
                 {
-                    "id": "afadc4be-38cf-4f50-b2c2-2d904fb6f343",
+                    "id": "ffa99ffd-0dfe-426d-a024-83962cad2c17",
                     "name": "auth",
                     "item": [
                         {
-                            "id": "3ec795d7-8e04-4d04-9ce5-d1abba96275d",
+                            "id": "8e21a443-0096-4720-86ba-2cf38784664e",
                             "name": "Register a new user",
                             "request": {
                                 "name": "Register a new user",
@@ -93,7 +93,7 @@
                             },
                             "response": [
                                 {
-                                    "id": "87abbe27-bd97-4a19-aec3-d7a78eb96010",
+                                    "id": "5b48d8a2-161d-4195-9236-2522d600de96",
                                     "name": "Created",
                                     "originalRequest": {
                                         "url": {
@@ -122,12 +122,12 @@
                                             "value": "application/json"
                                         }
                                     ],
-                                    "body": "{\n \"userId\": \"07eea668-accd-9207-71af-97e19b80452d\",\n \"token\": \"cillum qui consectetur\"\n}",
+                                    "body": "{\n \"userId\": \"urn:uuid:da943705-d57d-5fe7-1997-4441d79cd5c1\",\n \"token\": \"commodo dolor\"\n}",
                                     "cookie": [],
                                     "_postman_previewlanguage": "json"
                                 },
                                 {
-                                    "id": "52abfbf0-bac6-4a41-9ee9-a69a0d34f18e",
+                                    "id": "8ba19a64-1b09-4c7b-98d8-a091b2e872b8",
                                     "name": "Bad Request",
                                     "originalRequest": {
                                         "url": {
@@ -164,7 +164,7 @@
                             "event": []
                         },
                         {
-                            "id": "ebb1c59c-6c68-48aa-b9fc-9887a1bd18f0",
+                            "id": "12c90755-90d2-4e71-9c08-666dc0b986f6",
                             "name": "Login",
                             "request": {
                                 "name": "Login",
@@ -196,7 +196,7 @@
                             },
                             "response": [
                                 {
-                                    "id": "e357acd1-3740-4d3a-9c2b-213d05c2a77c",
+                                    "id": "faaa6469-3dff-4a25-8657-a661e8b7e050",
                                     "name": "Authenticated",
                                     "originalRequest": {
                                         "url": {
@@ -225,12 +225,12 @@
                                             "value": "application/json"
                                         }
                                     ],
-                                    "body": "{\n \"userId\": \"07eea668-accd-9207-71af-97e19b80452d\",\n \"token\": \"cillum qui consectetur\"\n}",
+                                    "body": "{\n \"userId\": \"urn:uuid:da943705-d57d-5fe7-1997-4441d79cd5c1\",\n \"token\": \"commodo dolor\"\n}",
                                     "cookie": [],
                                     "_postman_previewlanguage": "json"
                                 },
                                 {
-                                    "id": "d5a22799-3305-4f07-b8f9-39f4af24bb5e",
+                                    "id": "e6909143-19b7-4442-971b-fbbd9da97897",
                                     "name": "Unauthorized",
                                     "originalRequest": {
                                         "url": {
@@ -270,7 +270,7 @@
                     "event": []
                 },
                 {
-                    "id": "bbb0c78b-f1a0-4e96-b888-44101023b25d",
+                    "id": "4636f126-8233-49b0-b9f3-705b5231fa57",
                     "name": "JWT-protected test endpoint",
                     "request": {
                         "name": "JWT-protected test endpoint",
@@ -299,7 +299,7 @@
                     },
                     "response": [
                         {
-                            "id": "c5731817-0a73-40fa-9f52-4e27d807a72a",
+                            "id": "2077420e-b69a-4b3c-aed8-b0b2b4f5fa9a",
                             "name": "OK",
                             "originalRequest": {
                                 "url": {
@@ -334,12 +334,12 @@
                                     "value": "application/json"
                                 }
                             ],
-                            "body": "{\n \"ok\": true,\n \"user\": {\n  \"userId\": \"sit sunt in do\",\n  \"role\": \"dolor volu\"\n }\n}",
+                            "body": "{\n \"ok\": true,\n \"user\": {\n  \"userId\": \"dolor deserunt\",\n  \"role\": \"pariatur la\"\n }\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "197efd37-d45d-4759-b88a-f22675a63aaf",
+                            "id": "1729d7df-f39d-4545-950f-96bc2bd733c8",
                             "name": "Unauthorized",
                             "originalRequest": {
                                 "url": {
@@ -394,7 +394,7 @@
         }
     ],
     "info": {
-        "_postman_id": "edee6755-9e51-4a81-934a-49163efd385d",
+        "_postman_id": "f2d50f7d-6814-4037-a426-9452bcd58434",
         "name": "Qwiklink Backend API",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
         "description": {
