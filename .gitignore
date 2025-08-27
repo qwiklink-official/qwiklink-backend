@@ -1,0 +1,32 @@
+node_modules
+*.env
+.env.local
+.env.*
+
+# Ignore local logs and generated outputs/backups
+*.log
+*.out
+*.err
+*.bak
+
+# Backups and generated folders
+migrations-backup/
+seeds-backup/
+qwiklink-backend/
+
+# Editor / OS files
+.vscode/
+.DS_Store
+
+# Additional ignored backups (added per request)
+# Logs
+*.log
+*.out
+
+# Generated backups
+migrations-backup/
+seeds-backup/
+postman_collection.json.bak
+
+# Local test/output folders
+qwiklink-backend/
