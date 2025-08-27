@@ -1,0 +1,59 @@
+openapi: 3.0.0
+info:
+  title: Qwiklink Authentication API
+  version: 1.0.0
+paths:
+  /auth/register:
+    post:
+      summary: Register a new user (customer or driver)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [email, password, firstName, lastName, phoneNumber, role]
+              properties:
+                email: { type: string, format: email }
+                password: { type: string, minLength: 6 }
+                firstName: { type: string }
+                lastName: { type: string }
+                phoneNumber: { type: string }
+                role: { type: string, enum: [customer, driver] }
+      responses:
+        "201":
+          description: User created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  userId: { type: string, format: uuid }
+                  token: { type: string }
+        "400": { description: Bad request }
+        "500": { description: Server error }
+  /auth/login:
+    post:
+      summary: Login
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [email, password]
+              properties:
+                email: { type: string, format: email }
+                password: { type: string }
+      responses:
+        "200":
+          description: Login successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  userId: { type: string, format: uuid }
+                  token: { type: string }
+        "401": { description: Invalid credentials }
+        "500": { description: Server error }
