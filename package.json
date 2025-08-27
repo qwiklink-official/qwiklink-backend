@@ -8,13 +8,13 @@
     "start": "node src/server.js",
     "db:init": "node scripts/init-local-db.js",
     "auth:test": "node scripts/auth-test.js",
-  "gen:client": "openapi-typescript openapi.yaml --output src/generated/api.ts",
-  "gen:postman": "npx --yes openapi-to-postmanv2 -s openapi.yaml -o postman_collection.json -p --pretty",
-  "migrate:make": "knex migrate:make --knexfile knexfile.cjs",
-  "migrate:latest": "knex migrate:latest --knexfile knexfile.cjs",
-  "migrate:rollback": "knex migrate:rollback --knexfile knexfile.cjs",
-  "seed:run": "knex seed:run --knexfile knexfile.cjs",
-  "migrate:reset": "knex migrate:rollback --knexfile knexfile.cjs --all && knex migrate:latest --knexfile knexfile.cjs"
+    "gen:client": "openapi-typescript openapi.yaml --output src/generated/api.ts",
+    "gen:postman": "npx --yes openapi-to-postmanv2 -s openapi.yaml -o postman_collection.json -p --pretty",
+    "migrate:make": "knex migrate:make --knexfile knexfile.cjs",
+    "migrate:latest": "knex migrate:latest --knexfile knexfile.cjs",
+    "migrate:rollback": "knex migrate:rollback --knexfile knexfile.cjs",
+    "seed:run": "knex seed:run --knexfile knexfile.cjs",
+    "migrate:reset": "knex migrate:rollback --knexfile knexfile.cjs --all && knex migrate:latest --knexfile knexfile.cjs"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
@@ -23,11 +23,14 @@
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2"
   },
+  "overrides": {
+    "uuid": "^8.3.2"
+  },
   "devDependencies": {
     "knex": "^3.1.0",
     "nodemon": "^3.1.10",
-    "pg": "^8.16.3",
-  "openapi-typescript": "^7.9.1",
-  "openapi-to-postmanv2": "^1.0.10"
+    "openapi-to-postmanv2": "^5.0.2",
+    "openapi-typescript": "^7.9.1",
+    "pg": "^8.16.3"
   }
 }
