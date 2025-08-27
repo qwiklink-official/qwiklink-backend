@@ -10,10 +10,11 @@
     "auth:test": "node scripts/auth-test.js",
   "gen:client": "openapi-typescript openapi.yaml --output src/generated/api.ts",
   "gen:postman": "npx --yes openapi-to-postmanv2 -s openapi.yaml -o postman_collection.json -p --pretty",
-    "migrate:make": "knex migrate:make --knexfile knexfile.cjs",
-    "migrate:latest": "knex migrate:latest --knexfile knexfile.cjs",
-    "migrate:rollback": "knex migrate:rollback --knexfile knexfile.cjs",
-    "seed:run": "knex seed:run --knexfile knexfile.cjs"
+  "migrate:make": "knex migrate:make --knexfile knexfile.cjs",
+  "migrate:latest": "knex migrate:latest --knexfile knexfile.cjs",
+  "migrate:rollback": "knex migrate:rollback --knexfile knexfile.cjs",
+  "seed:run": "knex seed:run --knexfile knexfile.cjs",
+  "migrate:reset": "knex migrate:rollback --knexfile knexfile.cjs --all && knex migrate:latest --knexfile knexfile.cjs"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
