@@ -157,6 +157,45 @@ Local dev checklist (CI-like)
 - Wait for server (helper): `node scripts/wait-for-url.cjs http://localhost:5000/health 30 1000`
 - Run auth smoke-test: `npm run auth:test`
 
+---
+
+## Onboarding for frontend devs — DB + migrations
+
+Follow these steps to run the app locally with a seeded database:
+
+1. Start a local Postgres (example using Docker):
+
+```powershell
+docker run --rm --name qwiklink-postgres -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=qwiklink -p 5432:5432 -d postgres:14
+```
+
+2. Ensure `.env` or env vars contain the DB connection (example):
+
+```text
+DATABASE_URL=postgres://postgres:postgres@localhost:5432/qwiklink
+JWT_SECRET=dev-jwt-secret
+```
+
+3. Run migrations and seeds:
+
+```powershell
+npm install
+npm run migrate:latest
+npm run seed:run
+```
+
+4. Start the server and verify:
+
+```powershell
+npm start
+npm run auth:test
+```
+
+Notes:
+- Seeds are deterministic and insert test users (see `seeds/001_users.cjs`).
+- To reset database during development: `npm run migrate:reset` (danger: deletes data).
+
+
 CI helper
 - The CI uses `scripts/wait-for-url.cjs` to wait for the server to be ready on `/health` before running `npm run auth:test`.
 
