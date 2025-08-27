@@ -3,7 +3,9 @@ require('dotenv').config();
 
 const base = {
   client: 'pg',
+  // Migrations and seeds directories
   migrations: { tableName: 'knex_migrations', directory: './migrations' },
+  seeds: { directory: './seeds' },
   pool: { min: 2, max: 10 },
 };
 
@@ -26,6 +28,11 @@ function connectionFromEnv({ ssl = false } = {}) {
 
 module.exports = {
   development: {
+    ...base,
+    connection: connectionFromEnv({ ssl: false }),
+  },
+  // Test environment for CI (uses DATABASE_URL if provided, otherwise defaults to local test DB)
+  test: {
     ...base,
     connection: connectionFromEnv({ ssl: false }),
   },
